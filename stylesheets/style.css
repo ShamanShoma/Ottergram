@@ -41,6 +41,7 @@ a {
 .thumbnail-image {
     display: block;
     width: 100%;
+    height: 900px;
 }
 
 .thumbnail-title {
