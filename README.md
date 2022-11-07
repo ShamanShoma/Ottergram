@@ -1,1 +1,1 @@
-https://ShamanShoma.github.io/Ottegram/index
+https://shamanshoma.github.io/Ottergram/
