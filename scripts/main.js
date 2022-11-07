@@ -23,3 +23,23 @@ function titleFromThumb(thumbnail) {
 function setDetailsFromThumb(thumbnail) {
     setDetails(imageFromThumb(thumbnail), titleFromThumb(thumbnail));
 }
+
+function addThumbClickHandler(thumb) {
+    thumb.addEventListener('click', function(event) {
+        event.preventDefault();
+        setDetailsFromThumb(thumb);
+    });
+}
+
+function getThumbnailsArray() {
+    const thumbnails = document.querySelectorAll(THUMBNAIL_LINK_SELECTOR);
+    const thumbnailsArray = [].slice.call(thumbnails);
+    return thumbnailsArray;
+}
+
+function initializeEvents() {
+    const thumbnails = getThumbnailsArray();
+    thumbnails.forEach(addThumbClickHandler);
+}
+
+initializeEvents();
